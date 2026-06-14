@@ -31,3 +31,30 @@ class Room:
 
     def mark_as_clean(self) -> None:
         self.is_clean = True
+
+from datetime import date
+
+class Reservation:
+    """Reprezentuje rezerwację konkretnego pokoju przez gościa hotelowego."""
+
+    def __init__(self, reservation_id: int, guest: 'Guest', room: 'Room', start_date: date, end_date: date):
+        self.reservation_id: int = reservation_id
+        self.guest: 'Guest' = guest
+        self.room: 'Room' = room
+        self.start_date: date = start_date
+        self.end_date: date = end_date
+        self.is_active: bool = True
+
+    def calculate_total_cost(self) -> float:
+        """Oblicza całkowity koszt rezerwacji na podstawie liczby nocy i ceny pokoju.
+        
+        Zwraca 0.0, jeśli daty są niepoprawne (np. data końcowa przed początkową).
+        """
+        nights = (self.end_date - self.start_date).days
+        if nights <= 0:
+            return 0.0
+        return nights * self.room.price_per_night
+
+    def cancel_reservation(self) -> None:
+        """Anuluje rezerwację, zmieniając jej status na nieaktywny."""
+        self.is_active = False
