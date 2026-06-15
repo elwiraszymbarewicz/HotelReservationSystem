@@ -91,7 +91,7 @@ System służy do prowadzenia recepcji hotelowej. Poniżej opisano kompletny, za
   W zakładce "Finanse i Faktury" wprowadzamy ID zakończonej rezerwacji. System automatycznie pobiera dane gościa, wylicza finalną kwotę na podstawie liczby spędzonych nocy i generuje oficjalny dokument z unikalnym numerem (np. `FV/500`) ze statusem "Nieopłacona". Po uregulowaniu należności, dwukrotne kliknięcie oznacza fakturę jako "OPŁACONA".
 
   ---
-  ## 📷 Wizualna dokumentacja systemu (Zrzuty ekranu)
+  ## 📷 Wizualna dokumentacja systemu
 Poniżej znajdują się zrzuty ekranu prezentujące działanie gotowanego programu z nowoczesnym, ciemnym motywem graficznym:
 <img width="1896" height="1294" alt="image" src="https://github.com/user-attachments/assets/b69a7009-a52b-49b1-9fed-f556e3796f45" />
 <img width="1882" height="1302" alt="image" src="https://github.com/user-attachments/assets/cae9e062-e6e0-49f9-8f2c-4f47544acce9" />
